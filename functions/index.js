@@ -1,4 +1,6 @@
-// Definetly use local testing by writing 
+// Definetly use local testing by writing firebase emulators:start
+// Deploy functions using firebase deploy --only functions
+// To delete functions use Firebase CLI
 
 const functions = require('firebase-functions');
 // Admin SDK Module, using Node 'require' statement
@@ -76,3 +78,4 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
 // Firebase cli automatically install the firebase and firebase sdk for cloud functions node modules, 
 //     for adding additional dependancies you can modify package.json and run NPM install
+// After firebase deploy --only functions you should be able to read in the fast few lines what functions have been deployed
